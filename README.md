@@ -4,9 +4,9 @@
 
 # Deploy
 
-- GitHub Repo: [Click here](https://github.com/hasibulislam999/Canim)
-- Server Link: [Click here](https://canim.onrender.com)
-- Live Link:
+- [x] GitHub Repo: [Click here](https://github.com/hasibulislam999/Canim)
+- [x] Server Link: [Click here](https://canim.onrender.com)
+- [ ] Live Link:
 
 # Ownership
 
