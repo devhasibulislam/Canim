@@ -9,7 +9,7 @@ exports.insertNewReview = async (data) => {
 
 /* display all reviews */
 exports.displayAllReviews = async () => {
-  const result = await Review.find();
+  const result = await Review.find().sort("-createdAt");
   return result;
 };
 

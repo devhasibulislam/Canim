@@ -10,7 +10,7 @@ exports.insertNewCategory = async (data) => {
 
 /* display all categories */
 exports.displayAllCategories = async () => {
-  const result = await Category.find();
+  const result = await Category.find().sort("-createdAt");
   return result;
 };
 

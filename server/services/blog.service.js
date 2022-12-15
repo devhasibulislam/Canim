@@ -10,7 +10,7 @@ exports.insertNewBlog = async (data) => {
 
 /* display all blogs */
 exports.displayAllBlogs = async () => {
-  const result = await Blog.find();
+  const result = await Blog.find().sort("-createdAt");
   return result;
 };
 

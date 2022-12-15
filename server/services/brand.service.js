@@ -10,7 +10,7 @@ exports.insertNewBrand = async (data) => {
 
 /* display all brands */
 exports.displayAllBrands = async () => {
-  const result = await Brand.find();
+  const result = await Brand.find().sort("-createdAt");
   return result;
 };
 

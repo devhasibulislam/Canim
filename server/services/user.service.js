@@ -77,7 +77,7 @@ exports.persistMeLogin = async (email) => {
 
 /* display all users */
 exports.displayAllUsers = async () => {
-  const users = await User.find().select("-password");
+  const users = await User.find().select("-password").sort("-createdAt");
   return users;
 };
 

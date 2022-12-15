@@ -4,7 +4,7 @@ const imageRemover = require("../utils/imageRemover.util");
 
 // display all banner
 exports.displayAllBanners = async () => {
-  const result = await Banner.find();
+  const result = await Banner.find().sort("-createdAt");
   return result;
 };
 

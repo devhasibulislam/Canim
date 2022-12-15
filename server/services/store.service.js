@@ -10,7 +10,7 @@ exports.insertNewStore = async (data) => {
 
 /* display all store */
 exports.displayAllStore = async () => {
-  const result = await Store.find().populate({
+  const result = await Store.find().sort("-createdAt").populate({
     path: "seller",
     select: "avatar name role _id",
   });
