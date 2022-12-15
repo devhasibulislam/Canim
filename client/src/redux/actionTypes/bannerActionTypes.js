@@ -1,0 +1,9 @@
+const bannerActionTypes = {
+  ADD_BANNER: "ADD_BANNER",
+  REMOVE_BANNER: "REMOVE_BANNER",
+  DISPLAY_BANNER: "DISPLAY_BANNER",
+  DISPLAY_BANNERS: "DISPLAY_BANNERS",
+  UPDATE_BANNER: "DISPLAY_BANNER",
+};
+
+export default bannerActionTypes;
