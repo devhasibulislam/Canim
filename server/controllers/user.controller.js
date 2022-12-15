@@ -252,3 +252,19 @@ exports.removeAnUser = async (req, res, next) => {
     next(error);
   }
 };
+
+// display single user
+exports.displayUser = async (req, res, next) => {
+  try {
+    const result = await userService.displayUser(req.params.id);
+
+    res.status(200).json({
+      acknowledgement: true,
+      message: "OK",
+      description: "Successfully fetch all users",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};

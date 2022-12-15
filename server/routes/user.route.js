@@ -47,5 +47,7 @@ router.patch("/update-user", userController.updateUser);
 // remove an user account
 router.delete("/remove-user", userController.removeAnUser);
 
+router.get("/:id", userController.displayUser);
+
 /* export user router */
 module.exports = router;

@@ -6,9 +6,7 @@ const imageRemover = require("../utils/imageRemover.util");
 /* find by email utility */
 async function findByEmail(email, filter) {
   return await User.findOne({ email: email }).select(
-    filter
-      ? "name email avatar phone role status address dateOfBirth"
-      : ""
+    filter ? "name email avatar phone role status address dateOfBirth" : ""
   );
 }
 
@@ -157,5 +155,10 @@ exports.updateUser = async (email, data) => {
     upsert: true,
     runValidators: false,
   });
+  return result;
+};
+
+exports.displayUser = async (id) => {
+  const result = await User.findById(id).select("-password");
   return result;
 };
