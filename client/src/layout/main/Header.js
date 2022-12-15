@@ -31,7 +31,7 @@ const Header = () => {
     <header className="shadow">
       <nav className="container mx-auto">
         <Navbar fluid={true} rounded={true}>
-          <Navbar.Brand href="https://flowbite.com/">
+          <Navbar.Brand href="/">
             <img
               src="/logo.png"
               className="mr-3 h-6 sm:h-9"
