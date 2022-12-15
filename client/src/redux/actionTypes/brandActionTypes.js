@@ -1,0 +1,9 @@
+const brandActionTypes = {
+  ADD_BRAND: "ADD_BRAND",
+  REMOVE_BRAND: "REMOVE_BRAND",
+  DISPLAY_BRAND: "DISPLAY_BRAND",
+  DISPLAY_BRANDS: "DISPLAY_BRANDS",
+  UPDATE_BRAND: "UPDATE_BRAND",
+};
+
+export default brandActionTypes;
