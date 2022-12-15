@@ -6,7 +6,7 @@ const Blog = ({ blog }) => {
 
   return (
     <>
-      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg h-fit">
         <div class="flex-shrink-0">
           <img
             class="object-cover w-full h-48"
