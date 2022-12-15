@@ -6,7 +6,7 @@
 
 - [x] GitHub Repo: [Click here](https://github.com/hasibulislam999/Canim)
 - [x] Server Link: [Click here](https://canim.onrender.com)
-- [ ] Live Link:
+- [x] Live Link: [Click here](https://canim.vercel.app)
 
 # Ownership
 
