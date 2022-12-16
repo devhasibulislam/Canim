@@ -15,7 +15,7 @@ const router = express.Router();
 router
   .route("/avatar")
   .post(upload.single("avatar"), imageController.imageUpload)
-  .patch(upload.single("avatar"), imageController.imageUpload);
+  .patch(upload.single("avatar"), imageController.imageUpdate);
 
 // sign up an user with confirmation
 router
