@@ -46,8 +46,7 @@ const ReviewList = () => {
         <tbody>
           {reviews?.map(
             ({
-              avatar,
-              name,
+              reviewer: { name, avatar },
               description,
               designation,
               _id,
@@ -69,7 +68,7 @@ const ReviewList = () => {
                     loading="lazy"
                     class="p-1 w-10 h-10 rounded-full object-cover object-center ring-2 ring-gray-300 dark:ring-gray-500"
                     src={avatar?.url}
-                    alt={_id}
+                    alt={avatar?.public_id}
                   />
                 </td>
                 <td class="py-4 px-6 whitespace-normal">{designation}</td>
