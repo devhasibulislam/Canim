@@ -30,6 +30,12 @@ const StoreList = () => {
               Description
             </th>
             <th scope="col" class="py-3 px-6">
+              Created_At
+            </th>
+            <th scope="col" class="py-3 px-6">
+              Updated_At
+            </th>
+            <th scope="col" class="py-3 px-6">
               Seller
             </th>
             <th scope="col" class="py-3 px-6">
@@ -42,7 +48,16 @@ const StoreList = () => {
         </thead>
         <tbody>
           {stores?.map(
-            ({ thumbnail, title, description, seller, status, _id }) => (
+            ({
+              thumbnail,
+              title,
+              description,
+              seller,
+              status,
+              _id,
+              createdAt,
+              updatedAt,
+            }) => (
               <tr
                 key={_id}
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -62,11 +77,17 @@ const StoreList = () => {
                   />
                 </td>
                 <td class="py-4 px-6 whitespace-normal" title={description}>
-                  {description?.length > 100
-                    ? description.slice(0, 100) + "..."
-                    : description}
+                  {description?.slice(0, 20) + "..."}
                 </td>
-                <td class="py-4 px-6 whitespace-normal">N/A</td>
+                <td class="py-4 px-6 whitespace-normal">
+                  <span className="flex gap-x-2">
+                    {createdAt?.split("T")[0]}
+                  </span>
+                </td>
+                <td class="py-4 px-6 whitespace-normal">
+                  {updatedAt?.split("T")[0]}
+                </td>
+                <td class="py-4 px-6 whitespace-normal">{seller.name}</td>
                 <td class="py-4 px-6 whitespace-normal capitalize">{status}</td>
                 <td class="py-4 px-6">
                   <span
