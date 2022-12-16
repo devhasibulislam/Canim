@@ -9,13 +9,19 @@ exports.insertNewReview = async (data) => {
 
 /* display all reviews */
 exports.displayAllReviews = async () => {
-  const result = await Review.find().sort("-createdAt");
+  const result = await Review.find().sort("-createdAt").populate({
+    path: "reviewer",
+    select: "avatar name _id",
+  });
   return result;
 };
 
 /* display specific review */
 exports.displaySpecificReview = async ({ id }) => {
-  const result = await Review.findById(id);
+  const result = await Review.findById(id).populate({
+    path: "reviewer",
+    select: "avatar name _id",
+  });
   return result;
 };
 
