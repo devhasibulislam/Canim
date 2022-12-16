@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DashboardButton from "../../../components/DashboardButton";
 import Title from "../../../components/Title";
 import addReview from "../../../redux/thunk/review/addReview";
+import persistMyAccount from "../../../redux/thunk/user/persistMyAccount";
 
 const AddReview = () => {
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(persistMyAccount());
+  }, [dispatch]);
 
   function handleAddReview(event) {
     event.preventDefault();
 
     const reviewInfo = {
+      reviewer: user?._id,
       designation: event.target.designation.value,
       description: event.target.description.value,
     };
