@@ -1,4 +1,3 @@
-import AdminGuard from "../components/account/AdminGuard";
 import Dashboard from "../layout/dashboard/Dashboard";
 import Analytics from "../pages/dashboard/Analytics";
 import AddBanner from "../pages/dashboard/banner/AddBanner";
@@ -27,11 +26,7 @@ import UpdateUser from "../pages/dashboard/user/UpdateUser";
 
 const dashboardRoute = {
   path: "/dashboard",
-  element: (
-    <AdminGuard>
-      <Dashboard />
-    </AdminGuard>
-  ),
+  element: <Dashboard />,
   children: [
     {
       path: "/dashboard",
