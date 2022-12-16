@@ -18,6 +18,10 @@ const Header = () => {
       anchor: "/brands",
     },
     {
+      name: "Profile",
+      anchor: "/profile",
+    },
+    {
       name: "Dashboard",
       anchor: "/dashboard",
     },
