@@ -12,6 +12,7 @@ function signinUser(userData) {
     const data = await res.json();
 
     if (data.acknowledgement) {
+      localStorage.setItem("accessToken", data.accessToken);
       dispatch(signinUserData(data.data));
     }
   };
