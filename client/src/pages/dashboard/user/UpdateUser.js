@@ -39,7 +39,7 @@ const UpdateUser = () => {
     const updateAvatar = async () => {
       setLoading(true);
       const request = await fetch(
-        `https://canim.onrender.com/user/avatar?public_id=${user?.avtar?.public_id}`,
+        `https://canim.onrender.com/user/avatar?public_id=${user?.avatar?.public_id}`,
         {
           method: "PATCH",
           body: formData,
