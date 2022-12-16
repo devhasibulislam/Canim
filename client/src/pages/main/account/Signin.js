@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import AccountBanner from "../../../components/account/AccountBanner";
 import AccountButton from "../../../components/account/AccountButton";
 import Logo from "../../../components/Logo";
 import Title from "../../../components/Title";
-import persistMyAccount from "../../../redux/thunk/user/persistMyAccount";
 import signinUser from "../../../redux/thunk/user/signinUser";
 
 const Signin = () => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(persistMyAccount());
-  }, [dispatch]);
 
   function handleSigninForm(event) {
     event.preventDefault();
