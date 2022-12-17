@@ -17,6 +17,7 @@ const brandRoute = require("./routes/brand.route");
 const storeRoute = require("./routes/store.route");
 const productRoute = require("./routes/product.route");
 const bannerRoute = require("./routes/banner.route");
+const paymentRoute = require("./routes/payment.route");
 
 /* application level connections */
 const app = express();
@@ -34,6 +35,7 @@ app.use("/brand", brandRoute);
 app.use("/store", storeRoute);
 app.use("/product", productRoute);
 app.use("/banner", bannerRoute);
+app.use("/payment", paymentRoute);
 
 /* global error handlers */
 app.use(error);
