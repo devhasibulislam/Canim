@@ -46,12 +46,12 @@ const ReviewList = () => {
         <tbody>
           {reviews?.map(
             ({
-              reviewer: { name, avatar },
               description,
               designation,
               _id,
               createdAt,
               updatedAt,
+              reviewer,
             }) => (
               <tr
                 key={_id}
@@ -61,14 +61,14 @@ const ReviewList = () => {
                   scope="row"
                   class="py-4 px-6 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                 >
-                  {name}
+                  {reviewer?.name}
                 </th>
                 <td class="py-4 px-6">
                   <img
                     loading="lazy"
                     class="p-1 w-10 h-10 rounded-full object-cover object-center ring-2 ring-gray-300 dark:ring-gray-500"
-                    src={avatar?.url}
-                    alt={avatar?.public_id}
+                    src={reviewer?.avatar?.url}
+                    alt={reviewer?.avatar?.public_id}
                   />
                 </td>
                 <td class="py-4 px-6 whitespace-normal">{designation}</td>
