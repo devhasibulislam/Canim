@@ -84,6 +84,22 @@ const UpdateUser = () => {
         className="shadow-lg md:p-10 p-4 rounded-lg flex flex-wrap gap-y-6 max-w-3xl justify-between bg-white"
         onSubmit={handleUpdateUser}
       >
+        {/* user brief intro */}
+        <div class="flex items-center space-x-4">
+          <img
+            class="w-10 h-10 rounded-full object-cover"
+            src={avatar?.url}
+            alt={avatar?.public_id}
+            loading="lazy"
+          />
+          <div class="font-medium dark:text-white">
+            <div>{userInfo?.name}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              {userInfo?.email}
+            </div>
+          </div>
+        </div>
+
         {/* user name */}
         <div class="w-full">
           <label
