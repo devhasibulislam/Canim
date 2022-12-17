@@ -1,11 +1,13 @@
 {
   "cSpell.words": [
+    "bkash",
     "canim",
     "cloudinary",
     "flowbite",
     "Leftbar",
     "middlewares",
-    "signin"
+    "signin",
+    "trnx"
   ],
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
