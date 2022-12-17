@@ -2,6 +2,7 @@ import Profile from "../layout/profile/Profile";
 import MyCart from "../pages/profile/MyCart";
 import MyProfile from "../pages/profile/MyProfile";
 import MyWishlist from "../pages/profile/MyWishlist";
+import Payment from "../pages/profile/Payment";
 
 const profileRoute = {
   path: "/profile",
@@ -18,6 +19,10 @@ const profileRoute = {
     {
       path: "my-wishlist",
       element: <MyWishlist />,
+    },
+    {
+      path: "my-payment",
+      element: <Payment />,
     },
   ],
 };
