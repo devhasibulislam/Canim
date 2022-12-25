@@ -1,6 +1,6 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { SiWish } from "react-icons/si";
-import { MdPayment } from "react-icons/md";
+import { MdPayment, MdOutlinePayments } from "react-icons/md";
 
 const iconStyle = "lg:h-4 md:h-10 h-8 lg:w-4 md:w-10 w-8 lg:mx-0 md:mx-auto";
 const routes = [
@@ -18,6 +18,11 @@ const routes = [
     icon: <MdPayment className={iconStyle} />,
     name: "My Payment",
     anchor: "my-payment",
+  },
+  {
+    icon: <MdOutlinePayments className={iconStyle} />,
+    name: "Payment Methods",
+    anchor: "payment-methods",
   },
 ];
 
