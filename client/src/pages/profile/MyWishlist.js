@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../../components/Title";
+import { addToCart } from "../../hooks/useCart";
+import { getFromWishlist, removeFromWishlist } from "../../hooks/useWishlist";
 
 const MyWishlist = () => {
-  const products = [];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(getFromWishlist());
+  }, [products]);
 
   return (
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -40,6 +46,7 @@ const MyWishlist = () => {
           {products?.map(
             ({
               thumbnails,
+              description,
               title,
               brand,
               store,
@@ -82,10 +89,28 @@ const MyWishlist = () => {
                 </td>
                 <td class="py-4 px-6 whitespace-normal">{quantity}</td>
                 <td class="py-4 px-6">
-                  <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-1 cursor-pointer">
+                  <span
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-1 cursor-pointer"
+                    onClick={() =>
+                      addToCart({
+                        _id,
+                        title,
+                        description,
+                        thumbnails,
+                        price,
+                        category,
+                        brand,
+                        store,
+                        quantity: 1,
+                      })
+                    }
+                  >
                     Cart
                   </span>
-                  <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-1 cursor-pointer">
+                  <span
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-1 cursor-pointer"
+                    onClick={() => removeFromWishlist(_id)}
+                  >
                     Delete
                   </span>
                 </td>
