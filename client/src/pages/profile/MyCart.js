@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../../components/Title";
+import { getFromCart, removeFromCart } from "../../hooks/useCart";
 
 const MyCart = () => {
-  const products = [];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(getFromCart());
+  }, [products]);
 
   return (
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -82,10 +87,13 @@ const MyCart = () => {
                 </td>
                 <td class="py-4 px-6 whitespace-normal">{quantity}</td>
                 <td class="py-4 px-6">
-                  <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-1 cursor-pointer">
+                  {/* <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-1 cursor-pointer">
                     Purchase
-                  </span>
-                  <span class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-1 cursor-pointer">
+                  </span> */}
+                  <span
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-1 cursor-pointer"
+                    onClick={() => removeFromCart(_id)}
+                  >
                     Delete
                   </span>
                 </td>
