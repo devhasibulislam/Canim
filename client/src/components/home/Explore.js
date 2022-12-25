@@ -6,6 +6,7 @@ import { SiWish } from "react-icons/si";
 import { BsCartPlusFill } from "react-icons/bs";
 import { addToCart } from "../../hooks/useCart";
 import { addToWishlist } from "../../hooks/useWishlist";
+import SectionHeader from "../SectionHeader";
 
 const Explore = () => {
   const dispatch = useDispatch();
@@ -16,11 +17,9 @@ const Explore = () => {
   }, [dispatch]);
 
   return (
-    <section className="bg-slate-100 container mx-auto my-4 lg:px-0 px-4 rounded-xl">
-      <h1 className="lg:text-6xl md:text-3xl text-xl text-center py-4">
-        Explore your needs
-      </h1>
-      <div className="p-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+    <section className="container mx-auto my-8 lg:px-0 px-4 rounded-xl py-8">
+      <SectionHeader>Explore Products</SectionHeader>
+      <div className="lg:columns-4 md:columns-2 columns-1 break-inside-avoid gap-6">
         {products.map(
           ({
             _id,
@@ -32,11 +31,10 @@ const Explore = () => {
             brand,
             store,
           }) => (
-            <div key={_id} className="max-w-sm">
+            <div key={_id} className="max-w-sm mb-4">
               <Card
                 imgAlt={thumbnails[0]?.public_id}
                 imgSrc={thumbnails[0]?.url}
-                className="h-full"
               >
                 <a href="/">
                   <h5
@@ -106,3 +104,8 @@ const Explore = () => {
 };
 
 export default Explore;
+
+/**
+ * TailwindCSS Masonry Layout
+ * https://medium.com/notonlycss/tailwindcss-masonry-layout-553cdaea2e8a
+ */
