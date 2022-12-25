@@ -15,3 +15,11 @@ function App() {
 }
 
 export default App;
+
+/**
+ * git submodule update failed with 'fatal: detected dubious ownership in repository at'
+ * https://stackoverflow.com/questions/72978485/git-submodule-update-failed-with-fatal-detected-dubious-ownership-in-repositor
+ * 
+ * Silence all safe.directory warnings
+ * git config --global --add safe.directory '*'
+ */
