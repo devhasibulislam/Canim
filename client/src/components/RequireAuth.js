@@ -21,7 +21,7 @@ const RequireAuth = ({ children }) => {
       {roles?.includes(user?.role) ? (
         children
       ) : (
-        <span className="h-screen w-screen flex flex-col justify-center items-center">
+        <span className="h-screen w-screen flex flex-col justify-center items-center bg-slate-200">
           401 unauthorized...
           <br />
           <Link
