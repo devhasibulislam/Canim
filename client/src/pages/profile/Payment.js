@@ -23,9 +23,9 @@ const Payment = () => {
       method: paymentMethod,
       paymentInformation: {
         receiver: user?.phone,
-        cardNumber: event.target.cardNumber.value,
-        cvcNumber: event.target.cvcNumber.value,
-        transactionId: event.target.trnxID.value,
+        cardNumber: event?.target?.cardNumber?.value,
+        cvcNumber: event?.target?.cvcNumber?.value,
+        transactionId: event?.target?.trnxID?.value,
       },
     };
 
@@ -127,7 +127,7 @@ const Payment = () => {
                 id="payment"
                 name="trnxID"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="Your TrnxID"
+                placeholder="Send Money to +8801906-315901"
                 required
               />
             </div>
@@ -175,7 +175,7 @@ const Payment = () => {
                 id="payment"
                 name="cvcNumber"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="Write your payment title"
+                placeholder="Write your card CVC or CVV numbers"
                 required
               />
             </div>
