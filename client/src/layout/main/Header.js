@@ -7,15 +7,15 @@ const Header = () => {
   const routes = [
     {
       name: "Categories",
-      anchor: "/categories",
+      anchor: "#categories",
     },
     {
       name: "Stores",
-      anchor: "/stores",
+      anchor: "#stores",
     },
     {
       name: "Brands",
-      anchor: "/brands",
+      anchor: "#brands",
     },
     {
       name: "Profile",
