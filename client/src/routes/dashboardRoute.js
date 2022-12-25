@@ -1,3 +1,4 @@
+import RequireAuth from "../components/RequireAuth";
 import Dashboard from "../layout/dashboard/Dashboard";
 import Analytics from "../pages/dashboard/Analytics";
 import AddBanner from "../pages/dashboard/banner/AddBanner";
@@ -26,7 +27,11 @@ import UpdateUser from "../pages/dashboard/user/UpdateUser";
 
 const dashboardRoute = {
   path: "/dashboard",
-  element: <Dashboard />,
+  element: (
+    <RequireAuth>
+      <Dashboard />
+    </RequireAuth>
+  ),
   children: [
     {
       path: "/dashboard",

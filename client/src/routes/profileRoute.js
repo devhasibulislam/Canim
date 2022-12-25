@@ -1,3 +1,4 @@
+import RequireAuth from "../components/RequireAuth";
 import Profile from "../layout/profile/Profile";
 import MyCart from "../pages/profile/MyCart";
 import MyProfile from "../pages/profile/MyProfile";
@@ -8,7 +9,11 @@ import UpdatePayment from "../pages/profile/UpdatePayment";
 
 const profileRoute = {
   path: "/profile",
-  element: <Profile />,
+  element: (
+    <RequireAuth>
+      <Profile />
+    </RequireAuth>
+  ),
   children: [
     {
       path: "/profile",
