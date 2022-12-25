@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Footer from "../../../components/Footer";
 import Title from "../../../components/Title";
 import displayAllBlogs from "../../../redux/thunk/blog/displayAllBlogs";
 import Blog from "./Blog";
@@ -22,6 +23,7 @@ const Blogs = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
